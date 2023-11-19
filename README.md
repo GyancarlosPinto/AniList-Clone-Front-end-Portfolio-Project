@@ -1,1 +1,1 @@
-# AniList-Clone-Front-end-Portfolio-Project
+# Otaku-Realms-Front-end-Project

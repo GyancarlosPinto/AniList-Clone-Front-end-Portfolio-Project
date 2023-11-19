@@ -1,4 +1,5 @@
-fetch("https://api.jikan.moe/v4/top/anime")
+function fetchTopAnime() {
+    fetch("https://api.jikan.moe/v4/top/anime")
     .then(response => response.json())
     .then(dataResponse => {
         const aniData = dataResponse.data
@@ -7,6 +8,7 @@ fetch("https://api.jikan.moe/v4/top/anime")
         }
     })
     .catch(console.error)
+}
 
 function createAnimeCard(animeCard) {
     const card = document.createElement("article");
@@ -30,7 +32,8 @@ function createAnimeCard(animeCard) {
     document.querySelector(".anime-list").append(card);
 }
 
-fetch("https://api.jikan.moe/v4/top/manga")
+function fetchTopManga() {
+    fetch("https://api.jikan.moe/v4/top/manga")
     .then(response => response.json())
     .then(dataResponse => {
         const mangaData = dataResponse.data
@@ -39,7 +42,7 @@ fetch("https://api.jikan.moe/v4/top/manga")
         }
     })
     .catch(console.error)
-
+}
 
 function createMangaCard(mangaCard) {
     const card = document.createElement("article");
@@ -61,30 +64,9 @@ function createMangaCard(mangaCard) {
 const browser = document.querySelector(".browse-options");
 browser.addEventListener("change", (event) => {
     event.preventDefault()
-    let baseUrl = "https://api.jikan.moe/v4/top/" + browser.value
-    fetch(baseUrl)
-    .then(response => response.json())
-    .then(dataResponse => {
-        const aniData = dataResponse.data
-        for (let animeCard = 0; animeCard < aniData.length; animeCard++) {
-            createAnimeCard(aniData[animeCard]);
-        }
-    })
-    .catch(console.error)
-
-    fetch(baseUrl)
-    .then(response => response.json())
-    .then(dataResponse => {
-        const mangaData = dataResponse.data
-        for (let mangaCard = 0; mangaCard < mangaData.length; mangaCard++) {
-            createMangaCard(mangaData[mangaCard]);
-        }
-    })
-    .catch(console.error)
-
     if (browser.value === "anime") {
-
+        fetchTopAnime();
     } else if (browser.value === "manga") {
-
+        fetchTopManga();
     }
 })
