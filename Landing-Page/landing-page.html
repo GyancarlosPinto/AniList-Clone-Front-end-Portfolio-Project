@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OtakuRealms</title>
     <link rel="stylesheet" href="landing-page.css" />
-    <script defer src="landing-page.js" ></script>
+    <script defer src="landing-page.js"></script>
     <script src="https://kit.fontawesome.com/68089a1316.js" crossorigin="anonymous"></script>
 </head>
 
@@ -18,9 +18,16 @@
     <main>
         <div class="services">
             <h2>Services Offered Here</h2>
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" name="search" placeholder="Search...">
             <button>Sign-Up</button>
+            <form>
+                <label>Browse</label>
+                <select class="browse-options">
+                    <option value="anime">Anime</option>
+                    <option value="manga">Manga</option>
+                </select>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" class="search" name="search" placeholder="Search...">
+            </form>
         </div>
         <!-- <a href='https://anilist.co/api/v2/oauth/authorize?client_id=15369&response_type=token'>Login with AniList</a> -->
         <div class="anime">

@@ -1,12 +1,12 @@
 fetch("https://api.jikan.moe/v4/top/anime")
-.then(response => response.json())
-.then(dataResponse => {
-    const aniData = dataResponse.data
-    for (let animeCard = 0; animeCard < aniData.length; animeCard++) {
-        createAnimeCard(aniData[animeCard]);
-    }
-})
-.catch(console.error)
+    .then(response => response.json())
+    .then(dataResponse => {
+        const aniData = dataResponse.data
+        for (let animeCard = 0; animeCard < aniData.length; animeCard++) {
+            createAnimeCard(aniData[animeCard]);
+        }
+    })
+    .catch(console.error)
 
 function createAnimeCard(animeCard) {
     const card = document.createElement("article");
@@ -22,18 +22,23 @@ function createAnimeCard(animeCard) {
         animeImg
     )
 
+    // card.addEventListener("click", (event) => {
+    //     event.preventDefault();
+
+    // })
+
     document.querySelector(".anime-list").append(card);
 }
 
 fetch("https://api.jikan.moe/v4/top/manga")
-.then(response => response.json())
-.then(dataResponse => {
-    const mangaData = dataResponse.data
-    for (let mangaCard = 0; mangaCard < mangaData.length; mangaCard++) {
-        createMangaCard(mangaData[mangaCard]);
-    }
-})
-.catch(console.error)
+    .then(response => response.json())
+    .then(dataResponse => {
+        const mangaData = dataResponse.data
+        for (let mangaCard = 0; mangaCard < mangaData.length; mangaCard++) {
+            createMangaCard(mangaData[mangaCard]);
+        }
+    })
+    .catch(console.error)
 
 
 function createMangaCard(mangaCard) {
@@ -52,3 +57,34 @@ function createMangaCard(mangaCard) {
 
     document.querySelector(".manga-list").append(card);
 }
+
+const browser = document.querySelector(".browse-options");
+browser.addEventListener("change", (event) => {
+    event.preventDefault()
+    let baseUrl = "https://api.jikan.moe/v4/top/" + browser.value
+    fetch(baseUrl)
+    .then(response => response.json())
+    .then(dataResponse => {
+        const aniData = dataResponse.data
+        for (let animeCard = 0; animeCard < aniData.length; animeCard++) {
+            createAnimeCard(aniData[animeCard]);
+        }
+    })
+    .catch(console.error)
+
+    fetch(baseUrl)
+    .then(response => response.json())
+    .then(dataResponse => {
+        const mangaData = dataResponse.data
+        for (let mangaCard = 0; mangaCard < mangaData.length; mangaCard++) {
+            createMangaCard(mangaData[mangaCard]);
+        }
+    })
+    .catch(console.error)
+
+    if (browser.value === "anime") {
+
+    } else if (browser.value === "manga") {
+
+    }
+})
