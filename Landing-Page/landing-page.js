@@ -64,9 +64,16 @@ function createMangaCard(mangaCard) {
 const browser = document.querySelector(".browse-options");
 browser.addEventListener("change", (event) => {
     event.preventDefault()
+    const anime = document.querySelector(".anime");
+    const manga = document.querySelector(".manga");
+
     if (browser.value === "anime") {
         fetchTopAnime();
+        manga.style.display = "none"
+        anime.style.display = "block"
     } else if (browser.value === "manga") {
         fetchTopManga();
+        manga.style.display = "block"
+        anime.style.display = "none"
     }
 })
