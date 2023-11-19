@@ -13,8 +13,8 @@ function fetchTopAnime() {
 function createAnimeCard(animeCard) {
     const card = document.createElement("article");
     card.className = "card"
-    const title = document.createElement("h3");
-    title.textContent = animeCard.title_english;
+    const title = document.createElement("p");
+    title.textContent = animeCard.title;
     const animeImg = document.createElement("img");
     animeImg.className = "ani-card-img";
     animeImg.setAttribute("src", animeCard.images.jpg.image_url);
@@ -80,3 +80,33 @@ browser.addEventListener("change", (event) => {
 fetchTopAnime();
 manga.style.display = "none";
 anime.style.display = "block";
+
+const search = document.querySelector(".search");
+const searchButton = document.querySelector(".search-button")
+searchButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    const query = "https://api.jikan.moe/v4/" + browser.value + "?q"
+    if (search.value === "") {
+        return 
+    } else {
+        fetch(query + "=" + search.value)
+        .then(response => response.json())
+        .then(dataResponse => {
+            console.log(dataResponse)
+            if (dataResponse.data.length === 0) {
+                search.style.borderColor = "red";
+            } else {
+                const container = document.querySelector(`.${browser.value}`);
+                container.querySelector("h2").textContent = "Search Results";
+                container.querySelector("div").innerHTML = "";
+                for (let results of dataResponse.data) {
+                    if (browser.value === "anime") {
+                        createAnimeCard(results); 
+                    } else if (browser.value === "manga") {
+                        createMangaCard(results);
+                    }
+                }
+            }
+        })
+    }
+})
