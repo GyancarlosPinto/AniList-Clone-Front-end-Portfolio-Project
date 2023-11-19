@@ -1,13 +1,13 @@
 function fetchTopAnime() {
     fetch("https://api.jikan.moe/v4/top/anime")
-    .then(response => response.json())
-    .then(dataResponse => {
-        const aniData = dataResponse.data
-        for (let animeCard = 0; animeCard < aniData.length; animeCard++) {
-            createAnimeCard(aniData[animeCard]);
-        }
-    })
-    .catch(console.error)
+        .then(response => response.json())
+        .then(dataResponse => {
+            const aniData = dataResponse.data
+            for (let animeCard = 0; animeCard < aniData.length; animeCard++) {
+                createAnimeCard(aniData[animeCard]);
+            }
+        })
+        .catch(console.error)
 }
 
 function createAnimeCard(animeCard) {
@@ -34,14 +34,14 @@ function createAnimeCard(animeCard) {
 
 function fetchTopManga() {
     fetch("https://api.jikan.moe/v4/top/manga")
-    .then(response => response.json())
-    .then(dataResponse => {
-        const mangaData = dataResponse.data
-        for (let mangaCard = 0; mangaCard < mangaData.length; mangaCard++) {
-            createMangaCard(mangaData[mangaCard]);
-        }
-    })
-    .catch(console.error)
+        .then(response => response.json())
+        .then(dataResponse => {
+            const mangaData = dataResponse.data
+            for (let mangaCard = 0; mangaCard < mangaData.length; mangaCard++) {
+                createMangaCard(mangaData[mangaCard]);
+            }
+        })
+        .catch(console.error)
 }
 
 function createMangaCard(mangaCard) {
@@ -62,18 +62,21 @@ function createMangaCard(mangaCard) {
 }
 
 const browser = document.querySelector(".browse-options");
+const anime = document.querySelector(".anime");
+const manga = document.querySelector(".manga");
 browser.addEventListener("change", (event) => {
-    event.preventDefault()
-    const anime = document.querySelector(".anime");
-    const manga = document.querySelector(".manga");
+    event.preventDefault();
 
     if (browser.value === "anime") {
         fetchTopAnime();
         manga.style.display = "none"
-        anime.style.display = "block"
+        anime.style.display = "block" // change if you switch in css to grid or flex
     } else if (browser.value === "manga") {
         fetchTopManga();
-        manga.style.display = "block"
+        manga.style.display = "block" // change if you switch in css to grid or flex
         anime.style.display = "none"
     }
 })
+fetchTopAnime();
+manga.style.display = "none";
+anime.style.display = "block";
