@@ -40,7 +40,7 @@ function createMangaCard(mangaCard) {
     const card = document.createElement("article");
     card.className = "card"
     const title = document.createElement("h3");
-    title.textContent = mangaCard.title_english;
+    title.textContent = mangaCard.title;
     const mangaImg = document.createElement("img");
     mangaImg.className = "manga-card-img";
     mangaImg.setAttribute("src", mangaCard.images.jpg.image_url);
