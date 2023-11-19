@@ -15,7 +15,7 @@ function createAnimeCard(animeCard) {
     title.textContent = animeCard.title_english;
     const animeImg = document.createElement("img");
     animeImg.className = "ani-card-img";
-    animeImg.setAttribute("scr", animeCard.images.jpg.image_url);
+    animeImg.setAttribute("src", animeCard.images.jpg.image_url);
 
     card.append(
         title,
@@ -43,7 +43,7 @@ function createMangaCard(mangaCard) {
     title.textContent = mangaCard.title_english;
     const mangaImg = document.createElement("img");
     mangaImg.className = "manga-card-img";
-    mangaImg.setAttribute("scr", mangaCard.images.jpg.image_url);
+    mangaImg.setAttribute("src", mangaCard.images.jpg.image_url);
 
     card.append(
         title,
