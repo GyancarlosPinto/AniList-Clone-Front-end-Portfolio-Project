@@ -5,3 +5,4 @@ Step into the world of Otaku Realms, your ultimate haven for all things nerdy an
 
 ![cosplaying](https://images.pexels.com/photos/13438266/pexels-photo-13438266.jpeg)
 
+Accessing Otaku Realms: [Otaku Realms Deployed Site](https://gyancarlospinto.github.io/Otaku-Realms-Front-end-Portfolio-Project/)
