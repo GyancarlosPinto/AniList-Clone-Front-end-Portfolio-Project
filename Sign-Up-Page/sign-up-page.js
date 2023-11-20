@@ -49,3 +49,5 @@ signUp.addEventListener("click", (event) => {
         formElement.reset();
     }
 });
+
+""
