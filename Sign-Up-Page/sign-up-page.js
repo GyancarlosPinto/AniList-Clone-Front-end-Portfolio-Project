@@ -23,11 +23,7 @@ signUp.addEventListener("click", (event) => {
     const username = formElement.username.value;
     const password = formElement.password.value;
     const confirmPassword = formElement.confirmPassword.value;
-    const agreeCheckbox = formElement.querySelector(".checkbox-label");
-    const agreeError = formElement.querySelector("#agreeError");
-
-    // Reset previous error messages
-    agreeError.textContent = "";
+    const agreeCheckbox = formElement.querySelector(".checkbox-original");
 
     if (!validateEmail(email)) {
         alert("Please fill out the required Email field!");
@@ -37,16 +33,13 @@ signUp.addEventListener("click", (event) => {
         alert("Please fill out the required Password field!");
     } else if (!validatePassword(confirmPassword)) {
         alert("Please fill out the required Confirm Password field!");
+    } else if (!agreeCheckbox.checked) {
+        alert("Please agree to the terms of service!"); 
     } else if (password !== confirmPassword) {
         alert("Passwords do not match!");
     } else {
         formElement.reset();
     }
 
-    if (agreeCheckbox.unchecked) {
-        alert("Please agree to the terms of service!"); 
-    } else if (agreeCheckbox.checked) {
-        formElement.reset();
-    }
 });
 

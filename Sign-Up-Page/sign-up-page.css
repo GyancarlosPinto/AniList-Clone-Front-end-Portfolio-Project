@@ -1,0 +1,73 @@
+:root {
+    --color-background: 237,241,245;
+    --color-foreground: 250,250,250;
+    --color-foreground-grey: 245,246,246;
+    --color-foreground-grey-dark: 234,236,237;
+    --color-foreground-blue: 246,248,251;
+    --color-foreground-blue-dark: 241,243,247;
+    --color-background-blue-dark: 31,35,45;
+}
+
+body {
+    background: rgb(var(--color-background));
+    color: rgb(var(--color-text));
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+.title {
+    font-family: san-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+h1 {
+    color: orangered;
+    -webkit-text-stroke: 1px black;
+}
+
+.form-container {
+    margin: 60px;
+    padding: 30px;
+}
+
+.bottom-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.checkbox-original {
+    width: min-content;
+}
+
+button {
+    background-color:orangered;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 15px;
+    margin-left: 40px;
+    text-align: center;
+    text-decoration: none;
+    width: 20%;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.links {
+    text-align: center;
+}
+
+.links a {
+    padding: 20px;
+}

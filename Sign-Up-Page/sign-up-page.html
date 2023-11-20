@@ -11,28 +11,24 @@
 
 <body>
     <div class="body">
-        <div class="title">Sign Up For Otaku Realms</div>
+        <div class="title">
+            <h1>Sign Up For Otaku Realms</h1>
+        </div>
         <form class="form-container">
             <input type="text" name="email" class="user-input" placeholder="Email">
-            <input type="text" name="username" class="user-input" placeholder="Username" >
+            <input type="text" name="username" class="user-input" placeholder="Username">
             <input type="password" name="password" class="user-input" placeholder="Password">
             <input type="password" name="confirmPassword" class="user-input" placeholder="Confirm Password">
-            <label role="checkbox" class="checkbox-input">
-                <span aria-checked="mixed" class="checkbox-input">
-                    <span class="checkbox-inner">
-                    </span>
-                    <input type="checkbox" aria-hidden="true" class="checkbox-original" unchecked>
+            <div class="bottom-container">
+                <input type="checkbox" aria-hidden="true" class="checkbox-original" unchecked>
+                <span class="checkbox-terms"> 
+                    You agree to our <a href="/terms" target="_blank">terms of service</a>
                 </span>
-                <span class="checkbox-label">
-                    You agree to our <a href="/terms" target="_blank">terms of service</a><!---->
-                </span>
-                <div id="agreeError" style="color: red;">
-                </div>
-            </label>
-            <button type="submit" class="submit">Sign up</button>
+                <button type="submit" class="submit">Sign up</button>
+            </div>
         </form>
-        <div class="link signup">
-            <a href="../Landing-Page/landing-page.html">Home</a> •
+        <div class="links">
+            <a href="/">Home</a> •
             <a href="/login" class="">Login</a> •
             <a href="/reverify" class="">Resend Verification Email</a>
         </div>
