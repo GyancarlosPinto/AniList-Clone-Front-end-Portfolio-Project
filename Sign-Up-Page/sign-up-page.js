@@ -50,4 +50,3 @@ signUp.addEventListener("click", (event) => {
     }
 });
 
-""
