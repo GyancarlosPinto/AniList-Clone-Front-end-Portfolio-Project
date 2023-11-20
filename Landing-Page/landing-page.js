@@ -47,7 +47,7 @@ function fetchTopManga() {
 function createMangaCard(mangaCard) {
     const card = document.createElement("article");
     card.className = "card"
-    const title = document.createElement("h3");
+    const title = document.createElement("p");
     title.textContent = mangaCard.title;
     const mangaImg = document.createElement("img");
     mangaImg.className = "manga-card-img";

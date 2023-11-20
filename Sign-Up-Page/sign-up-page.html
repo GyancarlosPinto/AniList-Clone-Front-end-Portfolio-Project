@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Otaku Realms Sign Up Page</title>
+    <link rel="stylesheet" href="sign-up-page.css" />
+    <script defer src="sign-up-page.js"></script>
 </head>
 
 <body>
     <div class="body">
         <div class="title">Sign Up For Otaku Realms</div>
         <form class="form-container">
-            <input placeholder="Email" class="al-input">
-            <input placeholder="Username" class="al-input">
-            <input placeholder="Password" type="password" class="al-input">
-            <input placeholder="Confirm Password" type="password" class="al-input">
+            <input type="text" name="email" class="al-input" placeholder="Email">
+            <input type="text" name="username" class="al-input" placeholder="Username" >
+            <input type="password" name="password" class="al-input" placeholder="Password">
+            <input type="password" name="confirmPassword" class="al-input" placeholder="Confirm Password">
             <label role="checkbox" class="el-checkbox input">
                 <span aria-checked="mixed" class="el-checkbox__input">
                     <span class="el-checkbox__inner">
@@ -25,7 +27,7 @@
                     You agree to our <a href="/terms" target="_blank">terms of service</a><!---->
                 </span>
             </label>
-            <div class="submit">Sign up</div>
+            <button type="submit" class="submit">Sign up</button>
         </form>
         <div class="link signup">
             <a href="../Landing-Page/landing-page.html">Home</a> •
