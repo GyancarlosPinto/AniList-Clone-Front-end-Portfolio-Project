@@ -1,0 +1,18 @@
+:root {
+    --gold-soundz: #ffd166;
+    --neon-watermelon: #ef476f;
+    --color-background: 237,241,245;
+    --color-foreground: 250,250,250;
+    --color-foreground-grey: 245,246,246;
+    --color-foreground-grey-dark: 234,236,237;
+    --color-foreground-blue: 246,248,251;
+    --color-foreground-blue-dark: 241,243,247;
+    --color-background-blue-dark: 31,35,45;
+}
+
+body {
+    background: rgb(var(--color-background));
+    color: rgb(var(--color-text));
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
