@@ -26,7 +26,7 @@ function createAnimeCard(animeCard) {
 
     // card.addEventListener("click", (event) => {
     //     event.preventDefault();
-
+    //     window.location = "https://google.com"
     // })
 
     document.querySelector(".anime-list").append(card);

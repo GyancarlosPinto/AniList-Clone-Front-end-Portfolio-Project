@@ -16,3 +16,82 @@ body {
     height: 100%;
     -webkit-font-smoothing: antialiased;
 }
+
+.login-button {
+    display: flex;
+    justify-content: end;
+    padding-right: 60px;
+    background-color: rgb(246, 70, 70);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-color: rgb(246, 70, 70);
+}
+
+.title {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    letter-spacing: 10px;
+    text-decoration: underline;
+    text-decoration-thickness: 6px;
+    text-decoration-color:#ffd166;
+    
+}
+
+h1 {
+    color: orangered;
+    -webkit-text-stroke: 2px #ffd166;
+}
+
+h2 {
+    color: #ffd166;
+    text-align: center;
+    margin: 0;
+}
+
+h3 {
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color:cadetblue;
+}
+
+.signup-button {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 20%;
+    margin: -10px;
+    background-color:orangered;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.browse-search {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-anime {
+    text-align:start;
+    color: red !important;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color:#ffd166;
+}  
+
+.anime {
+    display: grid;
+    grid-template-rows: 100px 300px; 
+}

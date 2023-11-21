@@ -3,6 +3,8 @@ Step into the world of Otaku Realms, your ultimate haven for all things nerdy an
 
 *`Please be aware that this webpage is still currently under construction and in a very early stage of development. Thus, some of the features and functions listed in the above paragaph will not be available at the current time. At the moment it is in a showcase phase of the build.`*
 
-![cosplaying](https://images.pexels.com/photos/13438266/pexels-photo-13438266.jpeg)
+![cosplay_1](https://images.pexels.com/photos/13438266/pexels-photo-13438266.jpeg)
+
+![cosplay_2](https://images.pexels.com/photos/19084402/pexels-photo-19084402/free-photo-of-portrait-of-woman-in-anime-costume.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
 
 Accessing Otaku Realms: [Otaku Realms Deployed Site](https://gyancarlospinto.github.io/Otaku-Realms-Front-end-Portfolio-Project/)
