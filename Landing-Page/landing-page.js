@@ -66,6 +66,8 @@ const anime = document.querySelector(".anime");
 const manga = document.querySelector(".manga");
 browser.addEventListener("change", (event) => {
     event.preventDefault();
+    anime.querySelector("div").innerHTML = "";
+    manga.querySelector("div").innerHTML = "";
     // fetches the data
     if (search.value) {
         searchApi();
@@ -98,7 +100,6 @@ function searchApi() {
             .then(response => response.json())
             .then(dataResponse => {
                 if (dataResponse.data.length === 0) {
-                    console.log(dataResponse.data);
                     search.style.borderColor = "red";
                 } else {
                     const container = document.querySelector(`.${browser.value}`);
