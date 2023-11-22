@@ -71,11 +71,12 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center; 
-    width: 20%;
-    margin: -10px;
-    background-color:orangered;
+    width: 10%;
+    padding: 10px;
+    margin: -20px;
+    background-color:rgb(246, 70, 70);
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .browse-search {
@@ -100,12 +101,11 @@ h3 {
 }
 
 img {
-    height: 200px;
+    height: 300px;
     width: 200px;
     margin-left: auto;
     margin-right: auto;
-    /* border-radius: 10px;
-    border-bottom: 10px; */
+    border-radius: 10px;
     object-fit: cover;
 }
 
@@ -117,11 +117,17 @@ img {
 
 .anime-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .manga-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(246, 70, 70);
 }
