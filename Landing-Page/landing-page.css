@@ -47,7 +47,7 @@ header {
 .title {
     font-family: Helvetica, sans-serif;
     font-size: 1.8rem;
-    font-weight: bold;
+    font-weight: bolder;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -78,11 +78,34 @@ h3 {
     text-decoration-color:rgb(246, 70, 70);
 }
 
+h4 {
+    color: rgb(246, 70, 70);
+    font-size: 20px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color:rgb(246, 70, 70); 
+}
+
 .services {
     display: flex;
     flex-direction: column;
     align-items: center; 
     background-color:rgb(50, 75, 76);
+}
+
+.articles {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
+i {
+    color: #ffd166;
+    font-size: 16px;
 }
 
 .signup-button {
