@@ -24,10 +24,10 @@ function createAnimeCard(animeCard) {
         animeImg
     )
 
-    card.addEventListener("click", (event) => {
-        event.preventDefault();
-        window.location = "https://google.com"
-    })
+    // card.addEventListener("click", (event) => {
+    //     event.preventDefault();
+    //     window.location = "https://google.com"
+    // })
 
     document.querySelector(".anime-list").append(card);
 }
@@ -66,13 +66,19 @@ const anime = document.querySelector(".anime");
 const manga = document.querySelector(".manga");
 browser.addEventListener("change", (event) => {
     event.preventDefault();
-
-    if (browser.value === "anime") {
+    // fetches the data
+    if (search.value) {
+        searchApi();
+    } else if (browser.value  === "anime") {
         fetchTopAnime();
+    } else if (browser.value  === "manga") {
+        fetchTopManga();
+    }
+    // handles display and which section to show
+    if (browser.value === "anime") {
         manga.style.display = "none"
         anime.style.display = "block" // change if you switch in css to grid or flex
     } else if (browser.value === "manga") {
-        fetchTopManga();
         manga.style.display = "block" // change if you switch in css to grid or flex
         anime.style.display = "none"
     }
@@ -83,33 +89,33 @@ anime.style.display = "block";
 
 const search = document.querySelector(".search");
 const searchButton = document.querySelector(".search-button")
-searchButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    console.log(search);
+function searchApi() {
     const query = "https://api.jikan.moe/v4/" + browser.value + "?rating=g&q"
-    console.log(search.value);
     if (!search.value) {
         alert("Search Box Cannot Be Empty!")
     } else {
         fetch(query + "=" + search.value)
-        .then(response => response.json())
-        .then(dataResponse => {
-            console.log(dataResponse)
-            if (dataResponse.data.length === 0) {
-                console.log(dataResponse.data);
-                search.style.borderColor = "red";
-            } else {
-                const container = document.querySelector(`.${browser.value}`);
-                container.querySelector("h2").textContent = "Search Results";
-                container.querySelector("div").innerHTML = "";
-                for (let results of dataResponse.data) {
-                    if (browser.value === "anime") {
-                        createAnimeCard(results); 
-                    } else if (browser.value === "manga") {
-                        createMangaCard(results);
+            .then(response => response.json())
+            .then(dataResponse => {
+                if (dataResponse.data.length === 0) {
+                    console.log(dataResponse.data);
+                    search.style.borderColor = "red";
+                } else {
+                    const container = document.querySelector(`.${browser.value}`);
+                    container.querySelector("h2").textContent = "Search Results";
+                    container.querySelector("div").innerHTML = "";
+                    for (let results of dataResponse.data) {
+                        if (browser.value === "anime") {
+                            createAnimeCard(results);
+                        } else if (browser.value === "manga") {
+                            createMangaCard(results);
+                        }
                     }
                 }
-            }
-        })
+            })
     }
+}
+searchButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    searchApi();
 })
