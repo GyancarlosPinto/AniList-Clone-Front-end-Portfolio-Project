@@ -24,10 +24,10 @@ function createAnimeCard(animeCard) {
         animeImg
     )
 
-    // card.addEventListener("click", (event) => {
-    //     event.preventDefault();
-    //     window.location = "https://google.com"
-    // })
+    card.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.location = "https://google.com"
+    })
 
     document.querySelector(".anime-list").append(card);
 }
@@ -85,15 +85,18 @@ const search = document.querySelector(".search");
 const searchButton = document.querySelector(".search-button")
 searchButton.addEventListener("click", (event) => {
     event.preventDefault();
-    const query = "https://api.jikan.moe/v4/" + browser.value + "?q"
-    if (search.value === "") {
-        return 
+    console.log(search);
+    const query = "https://api.jikan.moe/v4/" + browser.value + "?rating=g&q"
+    console.log(search.value);
+    if (!search.value) {
+        alert("Search Box Cannot Be Empty!")
     } else {
         fetch(query + "=" + search.value)
         .then(response => response.json())
         .then(dataResponse => {
             console.log(dataResponse)
             if (dataResponse.data.length === 0) {
+                console.log(dataResponse.data);
                 search.style.borderColor = "red";
             } else {
                 const container = document.querySelector(`.${browser.value}`);
