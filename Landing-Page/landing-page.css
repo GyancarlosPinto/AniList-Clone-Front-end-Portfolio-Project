@@ -29,6 +29,7 @@ button {
     font-size: 16px;
 }
 
+
 .login-button {
     display: flex;
     justify-content: end;
@@ -93,7 +94,7 @@ h3 {
     border-radius: 20px;
 }
 
-button:hover {
+button:hover, .signup-button:hover {
     color: goldenrod;
     font-weight: bolder;
     background-color: red;
