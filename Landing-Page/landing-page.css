@@ -17,6 +17,18 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+button {
+    background-color:rgb(246, 70, 70);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 10%;
+    display: inline-block;
+    font-size: 16px;
+}
+
 .login-button {
     display: flex;
     justify-content: end;
@@ -57,6 +69,8 @@ h2 {
 }
 
 h3 {
+    color: rgb(246, 70, 70);
+    font-size: 24px;
     text-align: center;
 }
 
@@ -77,6 +91,14 @@ h3 {
     background-color:rgb(246, 70, 70);
     border: 2px solid black;
     border-radius: 20px;
+}
+
+button:hover {
+    color: goldenrod;
+    font-weight: bolder;
+    background-color: red;
+    border: 2px solid #ffd166;
+    transition: 0.2s ease;
 }
 
 .browse-search {
@@ -129,5 +151,8 @@ img {
 .footer {
     display: flex;
     justify-content: space-evenly;
+    color: #ffd166;
+    font-size: 20px;
+    padding: 20px;
     background-color: rgb(246, 70, 70);
 }

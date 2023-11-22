@@ -72,7 +72,7 @@ button:hover  {
     font-weight: bolder;
     background-color: red;
     border: 2px solid goldenrod;
-    transition: background-color 0.3s ease;
+    transition: 0.2s ease;
 }
 
 .links {
