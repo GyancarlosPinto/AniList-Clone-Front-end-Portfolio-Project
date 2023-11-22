@@ -71,8 +71,11 @@ h2 {
 
 h3 {
     color: rgb(246, 70, 70);
-    font-size: 24px;
+    font-size: 26px;
     text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color:rgb(246, 70, 70);
 }
 
 .services {
@@ -113,6 +116,7 @@ button:hover, .signup-button:hover {
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-decoration-color:#ffd166;
+    margin-bottom: 20px;
 }
 
 .top-manga {
@@ -121,6 +125,7 @@ button:hover, .signup-button:hover {
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-decoration-color:#ffd166;
+    margin-bottom: 20px;
 }
 
 img {
@@ -136,6 +141,21 @@ img {
     text-align: center;
     border-radius: 10px;
     object-fit: cover;
+}
+
+.card:hover {
+    border-style: solid;
+    border-color: #ffd166;
+    color: #ffd166;
+}
+
+p {
+    color: rgb(50, 75, 76);
+    font-weight: bold;
+}
+
+p:hover {
+    color: #ffd166;
 }
 
 .anime-list {
@@ -156,4 +176,5 @@ img {
     font-size: 20px;
     padding: 20px;
     background-color: rgb(246, 70, 70);
+    margin-top: 20px;
 }
