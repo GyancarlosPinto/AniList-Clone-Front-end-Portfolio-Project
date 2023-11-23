@@ -13,7 +13,8 @@ function fetchTopAnime() {
 function createAnimeCard(animeCard) {
     const card = document.createElement("article");
     card.className = "card"
-    const title = document.createElement("p");
+    const title = document.createElement("div");
+    title.className = "card-title";
     title.textContent = animeCard.title;
     const animeImg = document.createElement("img");
     animeImg.className = "ani-card-img";
