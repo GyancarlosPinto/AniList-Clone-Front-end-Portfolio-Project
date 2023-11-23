@@ -46,7 +46,7 @@ header {
 
 .title {
     font-family: Helvetica, sans-serif;
-    font-size: 2.0rem;
+    font-size: 48px;
     font-weight: bolder;
     text-align: center;
     margin-top: 30px;
@@ -79,12 +79,12 @@ h3 {
 }
 
 h4 {
-    color: rgb(246, 70, 70);
+    color:  #ffd166;
     font-size: 24px;
     text-align: center;
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    text-decoration-color:rgb(246, 70, 70); 
+    text-decoration-color: #ffd166;
 }
 
 .services {
@@ -135,7 +135,6 @@ button:hover, .signup-button:hover {
 
 .search-container {
     display: flex;
-
 }
 
 .search-button {
