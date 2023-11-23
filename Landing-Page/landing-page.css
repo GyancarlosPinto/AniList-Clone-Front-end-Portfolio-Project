@@ -8,6 +8,7 @@
     --color-foreground-blue: 246,248,251;
     --color-foreground-blue-dark: 241,243,247;
     --color-background-blue-dark: 31,35,45;
+    --color-background-300: 221,230,238;
 }
 
 body {
@@ -96,7 +97,7 @@ h4 {
 
 .articles {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 li {
@@ -133,8 +134,32 @@ button:hover, .signup-button:hover {
     flex-direction: column;
 }
 
+.browse-container {
+    margin-top: 40px;
+}
+
+.browse {
+    font-size: 36px;
+    font-weight: bolder;
+    color: rgb(50, 75, 76);
+}
+
+.browse-options {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bolder;
+    color: rgb(50, 75, 76);
+    border: 3px solid rgb(50, 75, 76);
+    width: 15%;
+    margin-left: 10px;
+    border-radius: 10px;
+    background: rgba(var(--color-background-300),.6);
+}
+
 .search-container {
     display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .search-button {
@@ -142,16 +167,12 @@ button:hover, .signup-button:hover {
     padding: 10px;
     border-radius: 5px;
     width: 5%;
-    margin-top: 40px;
-    margin-bottom: 40px;
 }
 
 .search {
     padding: 8px;
     border-radius: 5px;
     width: 95%;
-    margin-top: 40px;
-    margin-bottom: 40px;
 }
 
 .search:hover {
@@ -179,11 +200,12 @@ button:hover, .signup-button:hover {
 }
 
 img {
-    height: 450px;
-    width: 300px;
+    height: 524px;
+    width: 308px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
+    text-align: center;
     object-fit: cover;
 }
 
