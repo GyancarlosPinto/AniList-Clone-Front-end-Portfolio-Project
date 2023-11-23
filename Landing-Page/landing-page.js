@@ -21,8 +21,8 @@ function createAnimeCard(animeCard) {
     animeImg.setAttribute("src", animeCard.images.jpg.image_url);
 
     card.append(
-        title,
-        animeImg
+        animeImg,
+        title
     )
 
     // card.addEventListener("click", (event) => {
@@ -55,8 +55,8 @@ function createMangaCard(mangaCard) {
     mangaImg.setAttribute("src", mangaCard.images.jpg.image_url);
 
     card.append(
-        title,
-        mangaImg
+        mangaImg,
+        title
     )
 
     document.querySelector(".manga-list").append(card);
