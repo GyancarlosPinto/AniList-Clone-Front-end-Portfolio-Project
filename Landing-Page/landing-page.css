@@ -1,6 +1,7 @@
 :root {
     --gold-soundz: #ffd166;
     --neon-watermelon: #ef476f;
+    --smokey-black: rgb(50, 75, 76);
     --color-background: 237,241,245;
     --color-foreground: 250,250,250;
     --color-foreground-grey: 245,246,246;
@@ -158,11 +159,15 @@ i {
     border: 2px solid black;
     border-radius: 20px;
     box-sizing: border-box;
+    text-decoration: none;
+}
+
+.signup-button a {
+    text-decoration: none;
 }
 
 .signup-button span {
-    color:  #ffd166;
-    text-decoration: none;
+    color:  black;
 }
 
 button:hover, .signup-button:hover {
@@ -258,15 +263,26 @@ img {
 }
 
 .card {
+    width: 300px;
     text-align: center;
     border-radius: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
     object-fit: cover;
 }
 
+.card div {
+    margin-bottom: 20px;
+}
+
 .card:hover {
-    border-style: solid;
-    border-color: #ffd166;
+    border: 5px solid #ffd166;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    font-weight: bolder;
     color: #ffd166;
+    background-color:rgb(50, 75, 76);
+    transition: 0.3s ease;
 }
 
 p {
