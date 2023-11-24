@@ -8,4 +8,6 @@ Step into the world of Otaku Realms, your ultimate haven for all things nerdy an
 
 ![cosplay_2](https://images.pexels.com/photos/19084402/pexels-photo-19084402/free-photo-of-portrait-of-woman-in-anime-costume.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
 
-Accessing Otaku Realms: [Otaku Realms Deployed Site](https://gyancarlospinto.github.io/Otaku-Realms-Front-end-Portfolio-Project/)
+### Accessing Otaku Realms: [Otaku Realms Deployed Site](https://gyancarlospinto.github.io/Otaku-Realms-Front-end-Portfolio-Project/)
+
+*`For the showcase of the Otaku Realms webpage here the loading of Anime and Manga APIs has been chosen to show the code functionality and the workings of the website. With further interest this project will continue to evolve, with the hopes that one day it will become a fully functioning public webpage.`*
