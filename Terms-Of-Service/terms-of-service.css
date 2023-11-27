@@ -1,0 +1,71 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    background-color: #eee;;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
+
+.intro {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #eee;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.scroll-button, .scroll-button i, .scroll-button span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroll-button:hover {
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.links{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly; 
+    align-items: center;
+    margin-bottom: 5px;
+}
+
