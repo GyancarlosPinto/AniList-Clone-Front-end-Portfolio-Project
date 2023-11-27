@@ -11,3 +11,29 @@ Step into the world of Otaku Realms, your ultimate haven for all things nerdy an
 ### Accessing Otaku Realms: [Otaku Realms Deployed Site](https://gyancarlospinto.github.io/Otaku-Realms-Front-end-Portfolio-Project/)
 
 *`For the showcase of the Otaku Realms webpage here the loading of Anime and Manga APIs has been chosen to show the code functionality and the workings of the website. With further interest this project will continue to evolve, with the hopes that one day it will become a fully functioning public webpage.`*
+
+## Table of Contents
+
+- [Features (Under Development)](#features-under-development)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Showcase](#showcase)
+- [Contributing](#contributing)
+- [Browse and Search](#browse-and-search)
+- [Top Anime and Manga](#top-anime-and-manga)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
+## Features (Under Development)
+
+- **Anime Tracking**: Keep tabs on your favorite anime series.
+- **Manga Inventory**: Manage and organize your manga collection.
+- **Cosplay Chronicles**: Document your cosplay journey and connect with other cosplayers.
+- **DnD Campaign Tracker**: Track your Dungeons & Dragons campaigns with ease.
+- **Gamer's Hub**: Stay updated on the latest video games and share your gaming experiences.
+- **Comics Collection**: Catalog and discuss your comic book collection.
+- **Board Game Bonanza**: Explore and share your favorite board games.
+- **Chat Rooms and Forums**: Engage in vibrant discussions with fellow enthusiasts.
+- **Fan Fiction and Art Collaboration**: Immerse yourself in creative projects with the community.
+
+## Getting Started
