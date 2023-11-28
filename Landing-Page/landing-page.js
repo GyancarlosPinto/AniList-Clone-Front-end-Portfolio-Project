@@ -19,16 +19,41 @@ function createAnimeCard(animeCard) {
     const animeImg = document.createElement("img");
     animeImg.className = "ani-card-img";
     animeImg.setAttribute("src", animeCard.images.jpg.image_url);
+    const animeScore = document.createElement("div");
+    animeScore.className = "anime-score";
+    animeScore.textContent = `Rating Score: ${animeCard.score}`;
+    const aniSynop = document.createElement("div");
+    aniSynop.className = "ani-synopsis";
+    aniSynop.textContent = animeCard.synopsis;
 
     card.append(
         animeImg,
-        title
+        title,
+        animeScore,
+        aniSynop
     )
 
-    // card.addEventListener("click", (event) => {
-    //     event.preventDefault();
-    //     window.location = "https://google.com"
-    // })
+    animeScore.hidden = true;
+    card.addEventListener("mouseover", (event) => {
+        event.preventDefault();
+        animeScore.hidden = false;
+    })
+
+    card.addEventListener("mouseout", (event) => {
+        event.preventDefault();
+        animeScore.hidden = true;
+    })
+
+    aniSynop.hidden = true;
+    card.addEventListener("mouseover", (event) => {
+        event.preventDefault();
+        aniSynop.hidden = false;
+    })
+
+    card.addEventListener("mouseout", (event) => {
+        event.preventDefault();
+        aniSynop.hidden = true;
+    })
 
     document.querySelector(".anime-list").append(card);
 }
